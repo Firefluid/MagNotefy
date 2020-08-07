@@ -54,39 +54,37 @@ class SearchAppBar extends StatelessWidget {
       );
     }
 
-    return RoundedAppBar(
-      child: Row(
-        children: <Widget>[
-          PopupMenuButton(
-            icon: Icon(Icons.more_vert),
-            onSelected: (result) {
-              if (result == 0)
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => SettingsScreen()));
-              else
-                showAbout(context);
-            },
-            itemBuilder: (BuildContext context) => <PopupMenuEntry>[
-              const PopupMenuItem(
-                value: 0,
-                child: Text('Settings'),
-              ),
-              const PopupMenuItem(
-                value: 1,
-                child: Text('About'),
-              ),
-            ],
-          ),
+    return Row(
+      children: <Widget>[
+        PopupMenuButton(
+          icon: Icon(Icons.more_vert),
+          onSelected: (result) {
+            if (result == 0)
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => SettingsScreen()));
+            else
+              showAbout(context);
+          },
+          itemBuilder: (BuildContext context) => <PopupMenuEntry>[
+            const PopupMenuItem(
+              value: 0,
+              child: Text('Settings'),
+            ),
+            const PopupMenuItem(
+              value: 1,
+              child: Text('About'),
+            ),
+          ],
+        ),
 
-          Expanded(child: textInput),
-          
-          IconButton(
-            icon: Icon(Icons.search),
-            tooltip: "Search",
-            onPressed: () => filter(context, textInput.controller.text),
-          ),
-        ],
-      ),
+        Expanded(child: textInput),
+        
+        IconButton(
+          icon: Icon(Icons.search),
+          tooltip: "Search",
+          onPressed: () => filter(context, textInput.controller.text),
+        ),
+      ],
     );
   }
 }

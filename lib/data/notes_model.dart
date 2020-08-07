@@ -18,18 +18,14 @@ class NoteFile {
       // Format: yyyy-mm-dd_hh-mm-ss_n
       // (n is only used when a file with the current datetime already exists)
       String result = '$path/${dateTimeToMyString(DateTime.now())}';
-      print('TRY 1: $result.txt');
       if(!await File('$result.txt').exists())
         return '$result.txt';
       
       // Duplicate: add n to filename
       int number = 1;
       result += '_';
-      while(await File('$result$number.txt').exists()) {
-        print('TRY 2: $result$number.txt');
+      while(await File('$result$number.txt').exists())
         number++;
-      }
-      print('TRY 2: $result$number.txt');
       return '$result$number.txt';
     }
 
@@ -52,10 +48,10 @@ class NoteFile {
     header = contents.substring(0, splitpos);
     content = contents.substring(splitpos+1);
   }
-  void save() {
+  Future<void> save() async {
     File(path).writeAsString('$header\n$content');
   }
-  void delete() async {
+  Future<void> delete() async {
     if(await File(path).exists())
       File(path).delete();
   }
@@ -66,18 +62,15 @@ class NoteFile {
     File file = File(path);
     bool fileExists = await file.exists();
     modifiedTime = fileExists ? await file.lastModified() : creationDate;
-    print('MODIFIEDTIME: ${modifiedTime.toString()}');
     
     // Filesize
     int size = fileExists ? await file.length() : 0;
-    print('SIZE: $size');
 
     // '\t' for some reason only renders as a single space?
     return 'Date of Creation:  ${dateTimeToString(creationDate)}\n'
-      + 'Last modified:  ${dateTimeToString(modifiedTime)}\n'
-      + 'Size:  ${fileSizeToString(size)}\n'
-      + 'Path:  \"$path\"';  // Path is only for debug purposes
-  }
+      'Last modified:  ${dateTimeToString(modifiedTime)}\n'
+      'Size:  ${fileSizeToString(size)}';
+    }
 }
 
 class NoteModel extends ChangeNotifier {
