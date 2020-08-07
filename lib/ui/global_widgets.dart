@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:magnotes/data/theme_model.dart';
+import 'package:magnotefy/data/theme_model.dart';
 
 // A custom AppBar with rounded corners
 class RoundedAppBar extends StatelessWidget {

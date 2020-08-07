@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/widgets.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:magnotes/data/helper.dart';
+import 'package:magnotefy/data/helper.dart';
 
 class NoteFile {
   String header;

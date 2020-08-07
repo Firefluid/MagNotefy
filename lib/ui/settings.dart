@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:magnotes/data/settings_model.dart';
-import 'package:magnotes/ui/global_widgets.dart';
-import 'package:magnotes/data/theme_model.dart';
+import 'package:magnotefy/data/settings_model.dart';
+import 'package:magnotefy/ui/global_widgets.dart';
+import 'package:magnotefy/data/theme_model.dart';
 
 class SettingsScreen extends StatelessWidget {
   @override

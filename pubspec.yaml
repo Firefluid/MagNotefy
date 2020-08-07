@@ -1,4 +1,4 @@
-name: magnotes
+name: magnotefy
 description: A minimalistic note-taking app where the search-field is your primary form of navigation.
 
 # The following defines the version and build number for your application.
@@ -82,8 +82,8 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
 flutter_icons:
-  image_path: "assets/appicon/magnotes_icon.png"
+  image_path: "assets/appicon/magnotefy_icon.png"
   android: true
   adaptive_icon_background: "#FFFFFF"
-  adaptive_icon_foreground: "assets/appicon/magnotes_adaptive_foreground.png"
-  ios: "assets/appicon/magnotes_icon_ios.png"
+  adaptive_icon_foreground: "assets/appicon/magnotefy_adaptive_foreground.png"
+  ios: "assets/appicon/magnotefy_icon_ios.png"

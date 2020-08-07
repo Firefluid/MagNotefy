@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:magnotes/data/notes_model.dart';
-import 'package:magnotes/data/settings_model.dart';
-import 'package:magnotes/data/theme_model.dart';
-import 'package:magnotes/ui/global_widgets.dart';
-import 'package:magnotes/ui/editor.dart';
-import 'package:magnotes/ui/settings.dart';
+import 'package:magnotefy/data/notes_model.dart';
+import 'package:magnotefy/data/settings_model.dart';
+import 'package:magnotefy/data/theme_model.dart';
+import 'package:magnotefy/ui/global_widgets.dart';
+import 'package:magnotefy/ui/editor.dart';
+import 'package:magnotefy/ui/settings.dart';
 
 class SearchAppBar extends StatelessWidget {
   void filter(BuildContext context, String value) {
@@ -39,7 +39,7 @@ class SearchAppBar extends StatelessWidget {
         context: context,
         applicationVersion: '1.0.0',
         applicationIcon: Image.asset(
-          'assets/images/magnotes_indexed.png',
+          'assets/images/magnotefy_indexed.png',
           width: 48,
           height: 48,
         ),

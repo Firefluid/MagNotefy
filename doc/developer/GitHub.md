@@ -2,7 +2,7 @@
 
 ## Flutter App
 
-MagNotes is a Flutter App, meaning that it has all the usual Flutter folders and files, meaning all dart code is stored under the `lib` folder.
+MagNotefy is a Flutter App, meaning that it has all the usual Flutter folders and files, meaning all dart code is stored under the `lib` folder.
 
 The code in this project is split into two parts: UI and handling data
 
